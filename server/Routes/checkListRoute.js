@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 /* get items from check list */
 router.get("/", async (req, res) => {
   try {
-    const allItems = await CheckList.find();
+    const allItems = await CheckList.find().sort( { "TimeToBuy": 1 } );
     res.status(200).json(allItems);
   } catch (err) {
     res.status(500).json(err);

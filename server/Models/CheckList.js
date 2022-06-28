@@ -16,6 +16,10 @@ const CheckListSchema = new Schema(
       type: String,
       required: true,
     },
+    TimeToBuy: {
+      type: Date,
+      required: true,
+    },
   },
   { timestamps: true }
 );
